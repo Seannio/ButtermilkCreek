@@ -1,0 +1,333 @@
+/*global*/
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-image: url(bg.png);
+	font-family: 'Bodoni Moda', serif;
+
+	padding-top: 40px;
+	background-color: #F4EEE2;/* linear-gradient(to right, #e6f1ff, #e6f1ff 77%, #fff 77%);*/
+	color: #2d3231;
+	margin: 0;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+a {
+	text-decoration: none;
+	color: #2d3231;
+}
+
+a:visited {
+	color: #2d3231;
+}
+
+h2 {
+	color: #2d3231;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+h3 {
+	font-size: 26px;
+	color: #2d3231;
+	margin: 0;
+}
+
+p {
+	font-size: 18px;
+	line-height: 1.8;
+	color: #3A403F;
+}
+
+/*header*/
+header .container {
+	display: flex;
+	align-items: center;
+}
+
+h1 {
+	font-size: 24px;
+	color: #2d3231;
+}
+
+nav {
+	flex-grow: 1;
+	padding-left: 5%;
+}
+
+nav li {
+	display: inline;
+	margin: 10px;
+}
+
+header .fa-bars {
+	display: none;
+	margin: 40px;
+	cursor: pointer;
+}
+
+/*showcase*/
+#showcase {
+	height: calc(70vh - 90px);
+}
+
+#showcase .container {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+#showcase .logo img{
+	width: 140%;
+	object-fit: cover;
+	position: relative;
+	top: -5%;
+	right: -30%;
+}
+
+/*about*/
+#about {
+	background: #CADBC8; /* Green */
+	padding: 5% 0 23% 0; 
+}
+#about p {
+	float: left;
+}
+
+#about img {
+	float: right;
+	width: 30%;
+	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+	top: -30%;
+}
+
+/*product*/
+#product {
+	text-align: center;
+	background-image: url(bg.png);
+	background-color: #F3EEE2;
+	padding-top: 5%;
+}
+
+#product h2 {
+	margin-top: 0;
+}
+
+.product-gallery {
+	margin: 5% 3% 0 3%;
+}
+
+.product-gallery button:before {
+	color: #A39CD3;
+}
+
+/*process*/
+#filler {
+	text-align: center;
+	background-image: url(bg.png);
+	background-color: #F3EEE2;
+	padding: 5% 0 3% 0;
+
+} 
+
+#filler h2 {
+	margin-top: 0;
+}
+
+
+/*testimonial*/
+#paper {
+	background: #CADBC8; /* Green */
+	text-align: center;
+	padding: 10% 0 6% 0;
+}
+
+#paper h2 {
+	margin-top: 0;
+}
+
+#paper .quote {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10%;
+	margin: 10% 0 0 0;
+}
+
+.quote img {
+	width: 100%;
+}
+
+.quote div {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.quote i {
+	color: #e6e6e6;
+}
+
+figure {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+blockquote {
+	margin-left: 0;
+	margin-right: 0;
+	font-size: 24px;
+	font-style: italic;
+	line-height: 2;
+	color: #404040;
+}
+
+figcaption {
+	font-size: 24px;
+	color: #000;
+}
+
+
+/*footer*/
+footer {
+	background-image: url(bg.png);
+	background-color: #F4EEE2; /* White BG */
+	color: #2d3231;
+	padding: 4% 20% 5% 20%;
+	line-height: 0.7;
+}
+
+footer h2 {
+	font-size: 22px;
+	text-align: center;
+}
+
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+  }
+  
+  input[type=submit] {
+	background-color: #A39CD3;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+	background-color: #A39CD3;
+  }
+
+
+hr {
+
+	height: 1px;
+	background: #d9d9d9;
+    border: none;
+}
+
+.footer-low {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-low p {
+	font-size: 14px;
+	color: #4D5655;
+}
+
+/*responsive*/
+@media (max-width: 979px) {
+
+	#paper .container {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 767px) {
+	h1 {
+		flex-grow: 1;
+	}
+
+	nav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #f2f2f2;
+		padding: 0;
+		height: 100vh;
+		display: none;
+		z-index: 1;
+	}
+
+	nav li {
+		display: block;
+		margin: 30px;
+	}
+
+	header .fa-bars {
+		display: inline;
+	}
+
+	.gallery {
+		top: -40px;
+	}
+
+	.quote i {
+		font-size: 50px;
+	}
+
+	.footer-intro-links {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.footer-intro {
+		grid-column: 1 / span 3;
+	}
+}
+
+@media (max-width: 479px) {
+	h3 {
+		font-size: 30px;
+	}
+
+	#showcase h2 {
+		font-size: 40px;
+	}
+
+	.product-gallery {
+		margin: 5% 20px 0 20px;
+	}
+
+	.process-display {
+		grid-template-columns: 1fr;
+	}
+
+	#paper {
+		padding: 300px 0 6% 0;;
+	}
+
+	#paper .quote {
+		grid-template-columns: 1fr;
+	}
+}
+
+#sig {
+	padding-left:1%;
+	opacity:50%;
+	font-size: 12px;
+}
